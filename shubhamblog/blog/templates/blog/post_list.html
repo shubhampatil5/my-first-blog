@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Shub's blog</title>
+    </head>
+    <body>
+        <p>Hi there!</p>
+        <p>It works!</p>
+    </body>
+</html>
+Save the file and refresh your page.
+
+Figure 11.3
+
+Notice how the browser has understood that "Ola's blog" is the title of your page? It has interpreted <title>Ola's blog</title> and placed the text in the title bar of your browser (it will also be used for bookmarks and so on).
+
+Probably you have also noticed that each opening tag is matched by a closing tag, with a /, and that elements are nested (i.e. you can't close a particular tag until all the ones that were inside it have been closed too).
+
+It's like putting things into boxes. You have one big box, <html></html>; inside it there is <body></body>, and that contains still smaller boxes: <p></p>.
+
+You need to follow these rules of closing tags, and of nesting elements – if you don't, the browser may not be able to interpret them properly and your page will display incorrectly.
+
+Customize your template
+You can now have a little fun and try to customize your template! Here are a few useful tags for that:
+
+<h1>A heading</h1> for your most important heading
+<h2>A sub-heading</h2> for a heading at the next level
+<h3>A sub-sub-heading</h3> …and so on, up to <h6>
+<p>A paragraph of text</p>
+<em>text</em> emphasizes your text
+<strong>text</strong> strongly emphasizes your text
+<br> goes to another line (you can't put anything inside br and there's no closing tag)
+<a href="https://djangogirls.org">link</a> creates a link
+<ul><li>first item</li><li>second item</li></ul> makes a list, just like this one!
+<div></div> defines a section of the page
+Here's an example of a full template, copy and paste it into blog/templates/blog/post_list.html:
+
+blog/templates/blog/post_list.html
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>
+    </body>
+</html>
